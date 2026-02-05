@@ -11,10 +11,9 @@
 11            elif nums[i] < 0 : 
 12                temp = i
 13                steps = abs(nums[i]) % n
-14                for j in range(steps) : 
-15                    temp-=1
-16                result[i] = nums[temp]
-17            else :
-18                result[i] = 0
-19        return result
-20        
+14                temp-=steps
+15                result[i] = nums[temp]
+16            else :
+17                result[i] = 0
+18        return result
+19        
